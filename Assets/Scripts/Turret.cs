@@ -53,6 +53,7 @@ public class Turret : MonoBehaviour
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation); // Create a new projectile at the fire point
     }
 
+
     // Raycast to check if there is an obstacle between the turret and the player
     bool IsObstacleBetweenTurretAndPlayer()
     {
