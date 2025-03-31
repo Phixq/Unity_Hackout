@@ -2,44 +2,31 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public int damage = 1;  // The damage the projectile deals
-    public float speed = 10f;  // Speed at which the projectile travels
-    public float lifetime = 5f;  // Time after which the projectile will be destroyed
+    public float speed = 10f;
+    public float damage = 10f;
 
-    private Rigidbody2D rb;
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        Destroy(gameObject, lifetime);  // Destroy the projectile after its lifetime ends
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        // Move the projectile forward
+        // Make the projectile move forward
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         rb.linearVelocity = transform.right * speed;
     }
 
-    // Collision detection when the projectile hits something
+    // This method is called when the projectile collides with another object
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the projectile hit the player
-        if (collision.gameObject.CompareTag("Player"))
+        // Instead of using collision.CompareTag, we should use collision.collider.CompareTag
+        if (collision.collider.CompareTag("Player"))
         {
-            // Get the player's health component and apply damage
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);  // Apply damage to the player
-            }
+            // Handle the player being hit (deal damage, etc.)
+            Debug.Log("Player hit!");
 
-            Destroy(gameObject);  // Destroy the projectile after hitting the player
+            // Destroy the projectile after hitting the player
+            Destroy(gameObject);
         }
         else
         {
-            // If the projectile hits anything other than the player, destroy it
+            // Destroy the projectile if it hits something other than the player
             Destroy(gameObject);
         }
     }
