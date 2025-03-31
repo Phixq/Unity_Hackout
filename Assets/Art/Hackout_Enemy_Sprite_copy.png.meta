@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Hackout_Enemy_Sprite_copy_0: -6634998168261942233
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

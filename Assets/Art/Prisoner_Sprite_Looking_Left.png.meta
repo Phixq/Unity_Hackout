@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Prisoner_Sprite_Looking_Left_0: 2477129713153024660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
