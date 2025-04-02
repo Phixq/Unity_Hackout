@@ -38,10 +38,10 @@ public class SideScrollerPlayerController : MonoBehaviour
         // Set the linear velocity of the player, only modifying the x-axis for horizontal movement
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // Flip the player's sprite based on the direction of movement
+        // Flip and resize the player's sprite based on the direction of movement
         if (moveInput != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput), 1f, 1f);  // Flip sprite based on movement direction
+            transform.localScale = new Vector3(Mathf.Sign(moveInput) * 0.5f, 0.5f, 0.5f);  // Flip sprite & resize
         }
     }
 
