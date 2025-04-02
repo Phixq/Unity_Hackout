@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cellblock_Background_for_Hackout_0: 3385148155347593277
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
