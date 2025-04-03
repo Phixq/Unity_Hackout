@@ -24,12 +24,13 @@ public class SideScrollerPlayerController : MonoBehaviour
         // Check if the player is grounded (using a small circle to check below the player)
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.1f, groundLayer);
 
-        // Get the horizontal movement input (A/D or Left/Right arrow keys)
-        float moveInput = Input.GetAxisRaw("Horizontal");
-
-        // Call the methods to move and jump the player
-        MovePlayer(moveInput);
+        
         Jump();
+    }
+    private void FixedUpdate()
+    {
+        float moveInput = Input.GetAxisRaw("Horizontal");
+        MovePlayer(moveInput);
     }
 
     // Handles player movement
@@ -41,7 +42,7 @@ public class SideScrollerPlayerController : MonoBehaviour
         // Flip and resize the player's sprite based on the direction of movement
         if (moveInput != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput) * 0.45f, 0.45f, 0.45f);  // Flip sprite & resize
+            transform.localScale = new Vector3(Mathf.Sign(moveInput) * 1f,1f, 1f);  // Flip sprite & resize
         }
     }
 
