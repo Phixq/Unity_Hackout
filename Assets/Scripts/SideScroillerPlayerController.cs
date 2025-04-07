@@ -42,7 +42,7 @@ public class SideScrollerPlayerController : MonoBehaviour
         // Flip and resize the player's sprite based on the direction of movement
         if (moveInput != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(moveInput) * 1f,1f, 1f);  // Flip sprite & resize
+            transform.localScale = new Vector3(Mathf.Sign(moveInput) * 0.8f,0.8f, 0.8f);  // Flip sprite & resize
         }
     }
 
