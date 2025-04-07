@@ -606,8 +606,8 @@ Transform:
   m_GameObject: {fileID: 160504500}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: -1.167, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.5597, y: -1.405, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -691,8 +691,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.047957897, y: 0.0917629}
-  m_Size: {x: 1.2924881, y: 1.8216131}
+  m_Offset: {x: -0.032165706, y: -0.008294463}
+  m_Size: {x: 0.63900435, y: 1.6214983}
   m_Direction: 0
 --- !u!114 &160504506
 MonoBehaviour:
@@ -707,7 +707,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 3
-  jumpForce: 19
+  jumpForce: 6
   jumpCooldown: 2
   groundCheck: {fileID: 1489084574}
   groundLayer:
@@ -1000,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06bc8beb586dc794094e2db2ed3a1897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 90
+  timeRemaining: 300
   timerText: {fileID: 2045696036}
 --- !u!4 &214537490
 Transform:
@@ -1777,7 +1777,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.7400022, y: 0.8046043, z: -10}
+  m_LocalPosition: {x: 3.096776, y: 0.8046043, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2397,7 +2397,7 @@ Transform:
   m_GameObject: {fileID: 677215564}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.74, y: -0.8870001, z: -10}
+  m_LocalPosition: {x: -0.5597, y: -1.125, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2454,7 +2454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetObject: {fileID: 792247198}
-  interactionDistance: 5
+  interactionDistance: 0.5
 --- !u!212 &792247200
 SpriteRenderer:
   m_ObjectHideFlags: 0
