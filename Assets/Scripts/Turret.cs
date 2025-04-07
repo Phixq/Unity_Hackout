@@ -50,6 +50,14 @@ public class Turret : MonoBehaviour
     void Shoot()
     {
         nextFireTime = Time.time + fireRate; // Set the next time the turret can fire
+
+        // Check if projectilePrefab and firePoint are assigned
+        if (projectilePrefab == null || firePoint == null)
+        {
+            Debug.LogError("ProjectilePrefab or FirePoint is not assigned!");
+            return;
+        }
+
         Instantiate(projectilePrefab, firePoint.position, firePoint.rotation); // Create a new projectile at the fire point
     }
 
