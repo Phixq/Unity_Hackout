@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Prisoner_Walking_Left_Sprite_2_0: -3268672970953377078
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
