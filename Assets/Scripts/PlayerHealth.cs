@@ -1,40 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 100;
-    private int currentHealth;
+    public int health;
+    public int maxHealth = 10;
 
+    public SpriteRenderer playerSr;
+    public PlayerMovement playerMovement;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        currentHealth = maxHealth;
+        health = maxHealth;
     }
 
-    public void TakeDamage(int damage)
+    // Update is called once per frame
+    public void TakeDamage( int amount)
     {
-        currentHealth -= damage;
-        Debug.Log("Player took damage! Current Health: " + currentHealth);
-
-        if (currentHealth <= 0)
+        health -= amount;
+        if(health <= 0)
         {
-            Die();
+            playerSr.enabled = false;
+            playerMovement.enabled = false;
         }
-    }
-
-    private void Die()
-    {
-        Debug.Log("Player has died!");
-        // Add logic for respawning, game over, etc.
-        gameObject.SetActive(false);
-    }
-
-    public void Heal(int amount)
-    {
-        currentHealth += amount;
-        if (currentHealth > maxHealth)
-        {
-            currentHealth = maxHealth;
-        }
-        Debug.Log("Player healed! Current Health: " + currentHealth);
     }
 }

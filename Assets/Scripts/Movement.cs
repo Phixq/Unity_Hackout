@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Movement : MonoBehaviour
 {
     public float moveSpeed = 5f; //Movement speed of the player
     public Sprite Player_Ball;    
