@@ -31,6 +31,7 @@ public class EnemyBulletScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        Debug.Log("Turrt");
         if (other.gameObject.CompareTag("Player"))
         {
             other.gameObject.GetComponent<PlayerHealth>().TakeDamage(1);
