@@ -10,20 +10,19 @@ public class EnemyShooting : MonoBehaviour
     public float timer;
     private GameObject player;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float shootingRange = 5f; // New: made the distance configurable
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         float distance = Vector2.Distance(transform.position, player.transform.position);
         Debug.Log(distance);
 
-        if(distance < 5)
+        if (distance < shootingRange)
         {
             timer += Time.deltaTime;
 
@@ -34,11 +33,16 @@ public class EnemyShooting : MonoBehaviour
             }
         }
     }
+
     void shoot()
     {
         Instantiate(bullet, bulletPos.position, Quaternion.identity);
     }
 
-
+    // Draw the shooting range in the Scene view
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red; // Red for enemy range
+        Gizmos.DrawWireSphere(transform.position, shootingRange);
+    }
 }
-
