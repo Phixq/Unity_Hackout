@@ -12,13 +12,13 @@ public class PlayerMovement : MonoBehaviour
     private bool canJump = true;        // Can the player jump (cooldown check)
     private float lastJumpTime;         // The time when the player last jumped
     private Rigidbody2D rb;             // Rigidbody2D component
-    //private Animator anim;
+    private Animator anim;
 
     private void Start()
     {
         // Get the Rigidbody2D component
         rb = GetComponent<Rigidbody2D>();
-        //anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
     }
 
     private void Update()
@@ -40,7 +40,9 @@ public class PlayerMovement : MonoBehaviour
     {
         // Set the linear velocity of the player, only modifying the x-axis for horizontal movement
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
-       // anim.SetFloat("Speed") = rb.linearVelocity.x;
+        anim.SetFloat("Speed", moveInput);
+        Debug.Log("set speed");
+        Debug.Log(moveInput);
 
         // Flip and resize the player's sprite based on the direction of movement
         if (moveInput != 0)

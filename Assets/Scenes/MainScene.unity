@@ -15928,7 +15928,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b1ffa198af2d70a4d894c26f2cec96d0, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -17181,6 +17181,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4369981074084099820, guid: b9bd74e62a0231346ae6340aa23d0ccc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5903516908031823888, guid: b9bd74e62a0231346ae6340aa23d0ccc, type: 3}
+      propertyPath: m_BodyType
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8873903366332416060, guid: b9bd74e62a0231346ae6340aa23d0ccc, type: 3}
